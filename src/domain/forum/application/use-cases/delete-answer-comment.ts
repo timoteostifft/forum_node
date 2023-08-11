@@ -1,4 +1,4 @@
-import { left, right, Either } from '@/core/either'
+import { left, right, Either } from '@/core/types/either'
 import { AnswerCommentsRepository } from '@/domain/forum/application/repositories/answer-comments-repository'
 import { ResourceNotFoundError } from '../../../../core/errors/resource-not-found-error'
 import { NotAllowedError } from '../../../../core/errors/not-allowed-error'
