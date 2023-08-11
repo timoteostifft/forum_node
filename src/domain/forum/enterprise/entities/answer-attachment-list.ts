@@ -1,4 +1,3 @@
-
 import { WatchedList } from '@/core/entities/watched-list'
 import { AnswerAttachment } from './answer-attachment'
 

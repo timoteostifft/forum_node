@@ -1,4 +1,3 @@
-
 import { QuestionsRepository } from '../repositories/questions-repository'
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
 import { QuestionComment } from '@/domain/forum/enterprise/entities/question-comment'
@@ -12,7 +11,10 @@ interface CommentOnQuestionUseCaseRequest {
   content: string
 }
 
-type CommentOnQuestionUseCaseResponse = Either<ResourceNotFoundError, { questionComment: QuestionComment }>
+type CommentOnQuestionUseCaseResponse = Either<
+  ResourceNotFoundError,
+  { questionComment: QuestionComment }
+>
 
 export class CommentOnQuestionUseCase {
   constructor(

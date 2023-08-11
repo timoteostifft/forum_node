@@ -1,9 +1,9 @@
-import { UniqueEntityID } from '@/core/entities/unique-entity-id';
-import { Question } from '../../enterprise/entities/question';
-import { QuestionsRepository } from '../repositories/questions-repository';
-import { Either, right } from '@/core/either';
-import { QuestionAttachment } from '../../enterprise/entities/question-attachment';
-import { QuestionAttachmentList } from '../../enterprise/entities/question-attachment-list';
+import { UniqueEntityID } from '@/core/entities/unique-entity-id'
+import { Question } from '../../enterprise/entities/question'
+import { QuestionsRepository } from '../repositories/questions-repository'
+import { Either, right } from '@/core/either'
+import { QuestionAttachment } from '../../enterprise/entities/question-attachment'
+import { QuestionAttachmentList } from '../../enterprise/entities/question-attachment-list'
 
 interface CreateQuestionUseCaseRequest {
   authorId: string
@@ -26,7 +26,7 @@ export class CreateQuestionUseCase {
     const question = Question.create({
       authorId: new UniqueEntityID(authorId),
       title,
-      content
+      content,
     })
 
     const questionAttachments = attachmentsIds.map((attachmentId) => {
@@ -41,7 +41,7 @@ export class CreateQuestionUseCase {
     await this.questionsRepository.create(question)
 
     return right({
-      question
+      question,
     })
   }
 }
