@@ -1,13 +1,13 @@
 import { DeleteAnswerUseCase } from './delete-answer'
-import { InMemoryAnswersRepository } from 'test/repositories/in-memory-answers-repository'
+import { InMemoryAnswersRepository } from '@/test/repositories/in-memory-answers-repository'
 import { UniqueEntityID } from '@/core/entities/unique-entity-id'
-import { makeAnswer } from 'test/factories/make-answer'
-import { InMemoryQuestionsRepository } from 'test/repositories/in-memory-questions-repository'
+import { makeAnswer } from '@/test/factories/make-answer'
+import { InMemoryQuestionsRepository } from '@/test/repositories/in-memory-questions-repository'
 import { ChooseQuestionBestAnswerUseCase } from './choose-question-best-answer'
-import { makeQuestion } from 'test/factories/make-question'
+import { makeQuestion } from '@/test/factories/make-question'
 import { NotAllowedError } from '../../../../core/errors/not-allowed-error'
-import { InMemoryQuestionAttachmentsRepository } from 'test/repositories/in-memory-question-attachments-repository'
-import { InMemoryAnswerAttachmentsRepository } from 'test/repositories/in-memory-answer-attachments-repository'
+import { InMemoryQuestionAttachmentsRepository } from '@/test/repositories/in-memory-question-attachments-repository'
+import { InMemoryAnswerAttachmentsRepository } from '@/test/repositories/in-memory-answer-attachments-repository'
 
 let inMemoryAnswerAttachmentsRepository: InMemoryAnswerAttachmentsRepository
 let inMemoryQuestionAttachmentsRepository: InMemoryQuestionAttachmentsRepository
